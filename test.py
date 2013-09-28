@@ -1,7 +1,7 @@
 '''
 Created on Sep 23, 2013
 
-@author: Admin
+@author: Tran Van Hien
 '''
 import unittest
 import math
@@ -25,7 +25,7 @@ class Test(unittest.TestCase):
         self.assertEqual(detect_triangle( math.sqrt(2), 1, 1), "Tam giac vuong can") 
      
     def testTRiangle7(self):
-        self.assertEqual(detect_triangle(3, 4, 4), "Tam giac can") 
+        self.assertEqual(detect_triangle(3,4,4), "Tam giac can") 
     def testTRiangle8(self):
         self.assertEqual(detect_triangle(4, 4, 3), "Tam giac can")
     def testTRiangle9(self):
@@ -59,15 +59,18 @@ class Test(unittest.TestCase):
         self.assertEqual(detect_triangle(-3, 4, -5), "Input invalid")
     def testTRiangle21(self):
         self.assertEqual(detect_triangle(3, -4, -5), "Input invalid")
+    def testTRiangle22(self):
+        self.assertEqual(detect_triangle("a", 4, 5), "Input invalid")
+    def testTRiangle23(self):
+        self.assertEqual(detect_triangle(3, "a", 3), "Input invalid")
+    def testTRiangle24(self):
+        self.assertEqual(detect_triangle(3, 4, "b"), "Input invalid")
+    def testTRiangle25(self):
+        self.assertEqual(detect_triangle(3, "b", "c"), "Input invalid")
+    def testTRiangle26(self):
+        self.assertEqual(detect_triangle("a", "b", "c"), "Input invalid")
     
     
-    
-    
-   
-    
-    
-
-
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testTRiangle']
     unittest.main()
